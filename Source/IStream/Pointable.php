@@ -65,15 +65,15 @@ interface Pointable extends Stream
     /**
      * Rewind the position of a stream pointer.
      */
-    public function rewind(): bool;
+    public function rewind();
 
     /**
      * Seek on a stream pointer.
      */
-    public function seek(int $offset, int $whence = self::SEEK_SET): int;
+    public function seek($offset, $whence = self::SEEK_SET);
 
     /**
      * Get the current position of the stream pointer.
      */
-    public function tell(): int;
+    public function tell();
 }

@@ -25,10 +25,10 @@
     },
     "require": {
         "php"            : ">=7.1",
-        "hoa/consistency": "dev-master",
-        "hoa/event"      : "dev-master",
-        "hoa/exception"  : "dev-master",
-        "hoa/protocol"   : "dev-master"
+        "hoa/consistency": "~1.0",
+        "hoa/event"      : "~1.0",
+        "hoa/exception"  : "~1.0",
+        "hoa/protocol"   : "~1.0"
     },
     "require-dev": {
         "hoa/test": "dev-master"
@@ -37,11 +37,6 @@
         "psr-4": {
             "Hoa\\Stream\\"      : "Source",
             "Hoa\\Stream\\Test\\": "Test"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.x-dev"
         }
     }
 }

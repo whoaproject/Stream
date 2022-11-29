@@ -155,7 +155,7 @@ abstract class Stream implements IStream\Stream, Event\Listenable
      * If the stream does not exist, try to open it by calling the
      * $handler->_open() method.
      */
-    final private static function &_getStream(
+    private static function &_getStream(
         string $streamName,
         Stream $handler,
         string $context = null
@@ -208,14 +208,14 @@ abstract class Stream implements IStream\Stream, Event\Listenable
      * Note: This method is protected, but do not forget that it could be
      * overloaded into a public context.
      */
-    abstract protected function &_open(string $streamName, Context $context = null);
+    abstract protected function &_open($streamName, Context $context = null);
 
     /**
      * Close the current stream.
      * Note: this method is protected, but do not forget that it could be
      * overloaded into a public context.
      */
-    abstract protected function _close(): bool;
+    abstract protected function _close();
 
     /**
      * Open the stream.
@@ -571,7 +571,7 @@ class _Protocol extends Protocol\Node
      * @param   string  $id    ID of the component.
      * @return  mixed
      */
-    public function reachId(string $id)
+    public function reachId($id)
     {
         return Stream::getStreamHandler($id);
     }

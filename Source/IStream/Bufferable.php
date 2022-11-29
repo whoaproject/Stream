@@ -51,7 +51,7 @@ interface Bufferable extends Stream
      * Start a new buffer.
      * The callable acts like a light filter.
      */
-    public function newBuffer(callable $callable = null, int $size = null): int;
+    public function newBuffer($callable = null, $size = null);
 
     /**
      * Flush the buffer.
@@ -61,15 +61,15 @@ interface Bufferable extends Stream
     /**
      * Delete buffer.
      */
-    public function deleteBuffer(): bool;
+    public function deleteBuffer();
 
     /**
      * Get bufffer level.
      */
-    public function getBufferLevel(): int;
+    public function getBufferLevel();
 
     /**
      * Get buffer size.
      */
-    public function getBufferSize(): int;
+    public function getBufferSize();
 }

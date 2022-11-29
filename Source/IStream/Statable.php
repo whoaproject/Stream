@@ -53,57 +53,57 @@ interface Statable extends Stream
     /**
      * Get size.
      */
-    public function getSize(): int;
+    public function getSize();
 
     /**
      * Get informations about a file.
      */
-    public function getStatistic(): array;
+    public function getStatistic();
 
     /**
      * Get last access time of file.
      */
-    public function getATime(): int;
+    public function getATime();
 
     /**
      * Get inode change time of file.
      */
-    public function getCTime(): int;
+    public function getCTime();
 
     /**
      * Get file modification time.
      */
-    public function getMTime(): int;
+    public function getMTime();
 
     /**
      * Get file group.
      */
-    public function getGroup(): int;
+    public function getGroup();
 
     /**
      * Get file owner.
      */
-    public function getOwner(): int;
+    public function getOwner();
 
     /**
      * Get file permissions.
      */
-    public function getPermissions(): int;
+    public function getPermissions();
 
     /**
      * Check if the file is readable.
      */
-    public function isReadable(): bool;
+    public function isReadable();
 
     /**
      * Check if the file is writable.
      */
-    public function isWritable(): bool;
+    public function isWritable();
 
     /**
      * Check if the file is executable.
      */
-    public function isExecutable(): bool;
+    public function isExecutable();
 
     /**
      * Clear file status cache.

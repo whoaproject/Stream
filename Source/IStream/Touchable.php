@@ -70,45 +70,45 @@ interface Touchable extends Stream
     /**
      * Set access and modification time of file.
      */
-    public function touch(int $time = -1, int $atime = -1): bool;
+    public function touch($time = -1, $atime = -1);
 
     /**
      * Copy file.
      * Return the destination file path if succeed, false otherwise.
      */
-    public function copy(string $to, bool $force = self::DO_NOT_OVERWRITE): bool;
+    public function copy($to, $force = self::DO_NOT_OVERWRITE);
 
     /**
      * Move a file.
      */
     public function move(
-        string $name,
-        bool $force = self::DO_NOT_OVERWRITE,
-        bool $mkdir = self::DO_NOT_MAKE_DIRECTORY
-    ): bool;
+        $name,
+        $force = self::DO_NOT_OVERWRITE,
+        $mkdir = self::DO_NOT_MAKE_DIRECTORY
+    );
 
     /**
      * Delete a file.
      */
-    public function delete(): bool;
+    public function delete();
 
     /**
      * Change file group.
      */
-    public function changeGroup($group): bool;
+    public function changeGroup($group);
 
     /**
      * Change file mode.
      */
-    public function changeMode(int $mode): bool;
+    public function changeMode($mode);
 
     /**
      * Change file owner.
      */
-    public function changeOwner($user): bool;
+    public function changeOwner($user);
 
     /**
      * Change the current umask.
      */
-    public static function umask(int $umask = null): int;
+    public static function umask($umask = null);
 }

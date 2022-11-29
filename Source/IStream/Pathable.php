@@ -48,10 +48,10 @@ interface Pathable extends Stream
     /**
      * Get filename component of path.
      */
-    public function getBasename(): string;
+    public function getBasename();
 
     /**
      * Get directory name component of path.
      */
-    public function getDirname(): string;
+    public function getDirname();
 }

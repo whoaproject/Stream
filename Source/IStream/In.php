@@ -48,17 +48,17 @@ interface In extends Stream
     /**
      * Test for end-of-stream.
      */
-    public function eof(): bool;
+    public function eof();
 
     /**
      * Read n characters.
      */
-    public function read(int $length);
+    public function read($length);
 
     /**
      * Alias of $this->read().
      */
-    public function readString(int $length);
+    public function readString($length);
 
     /**
      * Read a character.
@@ -74,12 +74,12 @@ interface In extends Stream
     /**
      * Read an integer.
      */
-    public function readInteger(int $length = 1);
+    public function readInteger($length = 1);
 
     /**
      * Read a float.
      */
-    public function readFloat(int $length = 1);
+    public function readFloat($length = 1);
 
     /**
      * Read an array.
@@ -95,10 +95,10 @@ interface In extends Stream
     /**
      * Read all, i.e. read as much as possible.
      */
-    public function readAll(int $offset = 0);
+    public function readAll($offset = 0);
 
     /**
      * Parse input from a stream according to a format.
      */
-    public function scanf(string $format): array;
+    public function scanf($format);
 }

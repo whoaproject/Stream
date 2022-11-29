@@ -84,5 +84,5 @@ interface Lockable extends Stream
      * @param   int     $operation    Operation, use the self::LOCK_* constants.
      * @return  bool
      */
-    public function lock(int $operation): bool;
+    public function lock($operation);
 }
